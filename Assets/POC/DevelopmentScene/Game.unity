@@ -4119,7 +4119,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "<b>W</b> \u2013 Accelerate / Move the train forward.\n\n\n<b>Spacebar</b>
     \u2013 Decelerate / Apply brakes.\n\n\n<b>H</b> \u2013 Play train horn.\n\n\n<b>Mouse
-    Movement</b>\u2013 Look around / Control \nthe camera view."
+    Movement</b>\u2013 Look around / Control \nthe camera view.\n\n<b>I</b> \u2013
+    Quit UI"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47f5e33049f4242d7a1ee5d2b03419cc, type: 2}
   m_sharedMaterial: {fileID: 6070061758891052490, guid: 47f5e33049f4242d7a1ee5d2b03419cc,
@@ -18064,7 +18065,6 @@ MonoBehaviour:
   acceleration: 1
   brakeForce: 1
   maxSpeed: 25
-  trainAudioSource: {fileID: 0}
   minPitch: 0.5
   maxPitch: 2
   needle: {fileID: 21750987}

@@ -40,6 +40,14 @@ public class UIManager : MonoBehaviour
             else
                 HideQuitPopup();
         }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            if (uiPanel.activeSelf)
+                HideUI();
+            else
+                ShowUI();
+        }
     }
 
     public void ShowUI()
