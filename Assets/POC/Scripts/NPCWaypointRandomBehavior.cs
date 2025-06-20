@@ -1,12 +1,13 @@
 using UnityEngine;
+using UnityEngine.AI;
 using System.Collections;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class NPCWaypointRandomBehavior : MonoBehaviour
 {
     [Header("Waypoints and Movement")]
     public Transform[] waypoints;
-    public float moveSpeed = 3f;
-    public float reachDistance = 0.2f;
+    public float reachDistance = 0.5f;
 
     [Header("Idle Settings")]
     public float minIdleTime = 1f;
@@ -17,27 +18,35 @@ public class NPCWaypointRandomBehavior : MonoBehaviour
     [Header("Animation (Optional)")]
     public Animator animator;
 
+    private NavMeshAgent agent;
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
+
+    void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+
+        if (waypoints.Length > 0)
+        {
+            agent.SetDestination(waypoints[currentWaypointIndex].position);
+        }
+    }
 
     void Update()
     {
         if (waypoints.Length == 0 || isWaiting) return;
 
-        Transform targetWaypoint = waypoints[currentWaypointIndex];
-        Vector3 direction = targetWaypoint.position - transform.position;
+        bool reachedDestination = !agent.pathPending && agent.remainingDistance <= reachDistance;
 
-        transform.position += direction.normalized * moveSpeed * Time.deltaTime;
-
-        if (direction != Vector3.zero)
+        // Handle animation
+        if (animator)
         {
-            Quaternion lookRotation = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+            bool isWalking = !reachedDestination && agent.velocity.magnitude > 0.05f;
+            animator.SetBool("IsWalking", isWalking);
         }
 
-        if (animator) animator.SetBool("IsWalking", true);
-
-        if (Vector3.Distance(transform.position, targetWaypoint.position) <= reachDistance)
+        // If destination reached, start idle coroutine
+        if (reachedDestination)
         {
             StartCoroutine(HandleIdleThenMove());
         }
@@ -46,15 +55,18 @@ public class NPCWaypointRandomBehavior : MonoBehaviour
     IEnumerator HandleIdleThenMove()
     {
         isWaiting = true;
+        agent.isStopped = true;
 
         if (Random.value < idleChance)
         {
-            float idleDuration = Random.Range(minIdleTime, maxIdleTime);
             if (animator) animator.SetBool("IsWalking", false);
+            float idleDuration = Random.Range(minIdleTime, maxIdleTime);
             yield return new WaitForSeconds(idleDuration);
         }
 
         currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Length;
+        agent.SetDestination(waypoints[currentWaypointIndex].position);
+        agent.isStopped = false;
         isWaiting = false;
     }
 
@@ -62,7 +74,7 @@ public class NPCWaypointRandomBehavior : MonoBehaviour
     {
         if (waypoints == null || waypoints.Length < 2) return;
 
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.cyan;
         for (int i = 0; i < waypoints.Length; i++)
         {
             Vector3 current = waypoints[i].position;
