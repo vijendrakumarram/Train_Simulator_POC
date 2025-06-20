@@ -4,14 +4,23 @@ using UnityEngine.EventSystems;
 public class MouseLook : MonoBehaviour
 {
     public float mouseSensitivity = 100f;
-    public Transform playerBody; // Reference to the object to rotate horizontally (usually the player or camera parent)
+    public Transform playerBody;
 
-    float xRotation = 0f;
+    public float minVerticalAngle = -60f;
+    public float maxVerticalAngle = 60f;
 
-    //void Start()
-    //{
-    //    Cursor.lockState = CursorLockMode.Locked; // Lock the cursor in the center of the screen
-    //}
+    public float minHorizontalAngle = -90f;
+    public float maxHorizontalAngle = 90f;
+
+    private float xRotation = 0f;
+    private float yRotation = 0f;
+
+    private Quaternion initialBodyRotation;
+
+    void Start()
+    {
+        initialBodyRotation = playerBody.rotation;
+    }
 
     void Update()
     {
@@ -20,25 +29,26 @@ public class MouseLook : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
+        // Vertical
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f); // Prevent looking too far up/down
+        xRotation = Mathf.Clamp(xRotation, minVerticalAngle, maxVerticalAngle);
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);     // Vertical look (camera)
-        playerBody.Rotate(Vector3.up * mouseX);                            // Horizontal look (player body)
+        // Horizontal
+        yRotation += mouseX;
+        yRotation = Mathf.Clamp(yRotation, minHorizontalAngle, maxHorizontalAngle);
+        playerBody.localRotation = Quaternion.Euler(0f, yRotation, 0f);
     }
 
     bool IsPointerOverUI()
     {
 #if UNITY_ANDROID || UNITY_IOS
-        // Touch-based check
         if (Input.touchCount > 0)
             return EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId);
         else
             return false;
 #else
-        // Mouse-based check
         return EventSystem.current.IsPointerOverGameObject();
 #endif
     }
-
 }

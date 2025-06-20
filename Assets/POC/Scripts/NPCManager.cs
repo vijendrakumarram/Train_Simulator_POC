@@ -20,12 +20,12 @@ public class NPCManager : MonoBehaviour
             if (data.npcPrefab == null || data.waypoints.Length == 0) continue;
 
             GameObject npcInstance = Instantiate(data.npcPrefab, data.spawnPosition, Quaternion.identity);
-            //NPCWaypointRandomBehavior npcScript = npcInstance.GetComponent<NPCWaypointRandomBehavior>();
+            NPCWaypointRandomBehavior npcScript = npcInstance.GetComponent<NPCWaypointRandomBehavior>();
 
-            //if (npcScript != null)
-            //{
-            //    npcScript.waypoints = data.waypoints;
-            //}
+            if (npcScript != null)
+            {
+                npcScript.waypoints = data.waypoints;
+            }
         }
     }
 }
