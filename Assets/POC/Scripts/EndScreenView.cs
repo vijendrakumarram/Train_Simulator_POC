@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonHandler : MonoBehaviour
+public class EndScreenView : MonoBehaviour
 {
     [SerializeField] private string sceneName = string.Empty;
-    [SerializeField] public Button playButton;
+    public Button playButton;
 
     private void OnEnable()
     {
@@ -21,5 +21,4 @@ public class ButtonHandler : MonoBehaviour
         playButton.gameObject.SetActive(false);
         SceneLoaderWithDelay.Instance.LoadSceneWithDelay(sceneName);
     }
-  
 }
