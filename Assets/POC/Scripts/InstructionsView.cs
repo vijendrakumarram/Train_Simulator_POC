@@ -15,8 +15,6 @@ public class InstructionsView : MonoBehaviour
 
     public void CloseUIPanel()
     {
-        PlayerPrefs.SetInt(UIPrefKey, 1);
-        PlayerPrefs.Save();
         ScreenManager.HideScreen(ScreenUtils.Screen.InstructionsScreen);
     }
 }

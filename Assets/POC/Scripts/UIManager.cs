@@ -11,9 +11,13 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        bool wasVisible = PlayerPrefs.GetInt(UIPrefKey, 1) == 1;
-        if (!wasVisible)
+        bool wasNotVisible = PlayerPrefs.GetInt(UIPrefKey, 0) == 0;
+        if (wasNotVisible)
+        {
             ScreenManager.ShowScreen(ScreenUtils.Screen.InstructionsScreen);
+            PlayerPrefs.SetInt(UIPrefKey, 1);
+            PlayerPrefs.Save();
+        }
 
         quitButton?.onClick.AddListener(ShowQuitPopup);
     }

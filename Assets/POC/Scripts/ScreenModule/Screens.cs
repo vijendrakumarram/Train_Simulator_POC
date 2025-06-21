@@ -5,6 +5,7 @@ namespace ScreenUtils
     {
         None,
         InstructionsScreen,
-        YesNoScreen
+        YesNoScreen,
+        StartEngine
     }
 }

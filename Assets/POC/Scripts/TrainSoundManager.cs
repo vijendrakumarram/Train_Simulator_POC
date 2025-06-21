@@ -1,3 +1,4 @@
+﻿using ScreenUtils.Manager;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -48,10 +49,11 @@ public class TrainSoundManager : MonoBehaviour
         {
             hasBgFinished = true;
             idleAudio.Play();
-            trainController.canMoveTrain = true;
+            trainController.CanStartTrain = true;
+            ScreenManager.ShowScreen(ScreenUtils.Screen.StartEngine);
         }
 
-        if (hasBgFinished && trainController != null)
+        if (hasBgFinished && trainController != null && trainController.CanStartJourney)
         {
             float speed = trainController.CurrentSpeedNormalized();
 
@@ -77,7 +79,7 @@ public class TrainSoundManager : MonoBehaviour
         }
 
         // Horn trigger
-        if (Input.GetKeyDown(KeyCode.H) && !hornAudio.isPlaying)
+        if (Input.GetKeyDown(KeyCode.H) && !hornAudio.isPlaying && trainController.CanStartJourney)
         {
             hornAudio.Play();
             isHornPlaying = true;
@@ -93,14 +95,14 @@ public class TrainSoundManager : MonoBehaviour
             trainMixer.SetFloat("BGVolume", Mathf.Clamp(originalBGVol - 6f, -80f, 0f));
         }
 
-        // Horn ended � start restoring
+        // Horn ended — start restoring
         if (isHornPlaying && !hornAudio.isPlaying)
         {
             isHornPlaying = false;
         }
 
         // Gradually restore volumes
-        if (!isHornPlaying)
+        if (!isHornPlaying && trainController.CanStartJourney)
         {
             SmoothVolume("IdleVolume", targetIdleVolume);
             SmoothVolume("MoveVolume", targetMoveVolume);
