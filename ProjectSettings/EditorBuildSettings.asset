@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 07e4ab7434d3d9240b27c311023a44b5
   - enabled: 1
     path: Assets/POC/DevelopmentScene/Game.unity
-    guid: bb65b466bd9fc4d49b0b2650e7422544
+    guid: 4f07e780d90a4d94e809fcd644157278
   - enabled: 1
     path: Assets/POC/DevelopmentScene/End.unity
     guid: e8d48455c2b25c445a34aee94ea9c362
