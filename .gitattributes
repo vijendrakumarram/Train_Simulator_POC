@@ -1,1 +1,2 @@
 Terrain_0_0_2fd1cae0-f4cb-48c5-8fcd-e0ecc11e3302.asset filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
