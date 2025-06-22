@@ -1,1 +1,5 @@
 Terrain_0_0_2fd1cae0-f4cb-48c5-8fcd-e0ecc11e3302.asset filter=lfs diff=lfs merge=lfs -text
+Assets/POC/Models/Train_Engine filter=lfs diff=lfs merge=lfs -text
+Assets/POC/Models/Train_Engine/Engine_Exp filter=lfs diff=lfs merge=lfs -text
+Assets/POC/Models/Train_Engine/Train filter=lfs diff=lfs merge=lfs -text
+Assets/POC/Models/Train_Engine/Train_Cockpit filter=lfs diff=lfs merge=lfs -text
