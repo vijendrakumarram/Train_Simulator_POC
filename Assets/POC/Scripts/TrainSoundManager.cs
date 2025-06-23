@@ -1,11 +1,8 @@
-﻿using ScreenUtils.Manager;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 
 public class TrainSoundManager : MonoBehaviour
 {
-    public TrainController trainController;
-
     public AudioSource bgAudio;
     public AudioSource idleAudio;
     public AudioSource moveAudio;
@@ -26,7 +23,14 @@ public class TrainSoundManager : MonoBehaviour
     private float originalMoveVol;
     private float originalBGVol;
 
-    void Start()
+    private TrainController controller;
+
+    private void Start()
+    {
+        controller = GameController.Instance.trainController;
+    }
+
+    public void PlayAnnouncement()
     {
         // Start background music
         bgAudio.Play();
@@ -49,13 +53,12 @@ public class TrainSoundManager : MonoBehaviour
         {
             hasBgFinished = true;
             idleAudio.Play();
-            trainController.CanStartTrain = true;
-            ScreenManager.ShowScreen(ScreenUtils.Screen.StartEngine);
+            GameController.Instance.OnCompleteAnnouncement();
         }
 
-        if (hasBgFinished && trainController != null && trainController.CanStartJourney)
+        if (hasBgFinished && controller != null && controller)
         {
-            float speed = trainController.CurrentSpeedNormalized();
+            float speed = controller.CurrentSpeedNormalized();
 
             // Manage movement sound
             if (speed > 0.01f)
@@ -79,7 +82,7 @@ public class TrainSoundManager : MonoBehaviour
         }
 
         // Horn trigger
-        if (Input.GetKeyDown(KeyCode.H) && !hornAudio.isPlaying && trainController.CanStartJourney)
+        if (Input.GetKeyDown(KeyCode.H) && !hornAudio.isPlaying && controller.CanStartJourney)
         {
             hornAudio.Play();
             isHornPlaying = true;
@@ -102,7 +105,7 @@ public class TrainSoundManager : MonoBehaviour
         }
 
         // Gradually restore volumes
-        if (!isHornPlaying && trainController.CanStartJourney)
+        if (!isHornPlaying && controller.CanStartJourney)
         {
             SmoothVolume("IdleVolume", targetIdleVolume);
             SmoothVolume("MoveVolume", targetMoveVolume);

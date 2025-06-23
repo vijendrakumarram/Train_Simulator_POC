@@ -13,7 +13,7 @@ public class NPCManager : MonoBehaviour
     [Header("NPC Setup")]
     public NPCData[] npcList;
 
-    void Start()
+    public void SpawnNPC()
     {
         foreach (NPCData data in npcList)
         {

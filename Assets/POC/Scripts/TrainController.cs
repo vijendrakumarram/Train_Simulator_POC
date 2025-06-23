@@ -1,7 +1,5 @@
-﻿using DG.Tweening;
-using ScreenUtils.Manager;
+﻿using ScreenUtils.Manager;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TrainController : MonoBehaviour
@@ -26,8 +24,6 @@ public class TrainController : MonoBehaviour
     public Text speedText;
     public float maxNeedleAngle = -20f;
     public float zeroNeedleAngle = 230f;
-
-    public Image image;
 
     private float currentSpeed = 0f;
     private int moveDirection = 1;
@@ -66,10 +62,17 @@ public class TrainController : MonoBehaviour
             if (distanceToTarget <= stopThreshold)
                 isSlowingDown = true;
 
-            if (!isSlowingDown)
+            if (GameController.Instance.isManualMode)
+            {
                 HandleInput();
+            }
             else
-                AutoBrake(distanceToTarget);
+            {
+                if (!isSlowingDown)
+                    AutoAccelerate(distanceToTarget);
+                else
+                    AutoBrake(distanceToTarget);
+            }
 
             MoveTrain();
             UpdateSpeedometer();
@@ -88,11 +91,18 @@ public class TrainController : MonoBehaviour
         currentSpeed = Mathf.Clamp(currentSpeed, 0f, maxSpeed);
     }
 
+    void AutoAccelerate(float distanceToTarget)
+    {
+        if (!isSlowingDown && currentSpeed < maxSpeed)
+        {
+            currentSpeed += acceleration * Time.deltaTime;
+            currentSpeed = Mathf.Clamp(currentSpeed, 0f, maxSpeed);
+        }
+    }
+
     void AutoBrake(float distanceToTarget)
     {
-        // Dynamically adjust min speed based on how close we are
         float t = Mathf.InverseLerp(stopThreshold, stopSnapDistance, distanceToTarget);
-        //float minApproachSpeed = Mathf.Lerp(0.05f, 5f, t); // Gets closer to 0 as we approach
         float minApproachSpeed = Mathf.Lerp(0.5f, 5f, t); // Gets closer to 0 as we approach
 
         if (distanceToTarget > stopSnapDistance)
@@ -102,7 +112,6 @@ public class TrainController : MonoBehaviour
         }
         else
         {
-            // Final stopping logic
             currentSpeed -= brakeForce * Time.deltaTime;
             currentSpeed = Mathf.Max(0f, currentSpeed);
         }
@@ -118,22 +127,15 @@ public class TrainController : MonoBehaviour
     {
         if (distanceToTarget <= stopSnapDistance)
         {
-            // Gradually reduce to full stop
             currentSpeed -= brakeForce * Time.deltaTime;
             currentSpeed = Mathf.Max(0f, currentSpeed);
 
-            // Once it's nearly stopped, snap to final position
             if (currentSpeed <= 0.1f)
             {
-                //transform.position = targetPosition;
                 currentSpeed = 0f;
                 hasJourneyEnded = true;
                 canStartJourney = false;
-                
-                image.DOFade(1f, 1)
-                    .OnComplete(() => SceneManager.LoadScene(2));
-
-                Debug.Log("✅ Train reached and smoothly stopped at final target position.");
+                GameController.Instance.EndJoureny();
             }
         }
     }
