@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/OutdoorsScene.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
+  - enabled: 1
+    path: Assets/POC/DevelopmentScene/Menu.unity
+    guid: 07e4ab7434d3d9240b27c311023a44b5
+  - enabled: 1
+    path: Assets/POC/DevelopmentScene/Game.unity
+    guid: e2c8df5108f4d2e49902a49e4f135a3e
+  - enabled: 1
+    path: Assets/POC/DevelopmentScene/End.unity
+    guid: e8d48455c2b25c445a34aee94ea9c362
   m_configObjects: {}
