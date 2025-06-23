@@ -51,6 +51,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 2ed80b639d1b5ae44ba902b91803f129, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Opacity:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Roughness:
         m_Texture: {fileID: 2800000, guid: 5911320bf52945944b526862c2866577, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -93,6 +97,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
+    - _Roughness_Intensity: 1
     - _SrcBlend: 1
     - _StencilRef: 0
     - _StencilRefDepth: 8
@@ -115,13 +120,14 @@ Material:
     - _TransparentZWrite: 0
     - _UV_Offset: 45.1
     - _UV_Rotate: 98.9
-    - _UV_Tiling: 11
+    - _UV_Tiling: 21.4
     - _UseShadowThreshold: 0
     - _ZTestDepthEqualForOpaque: 3
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
+    - _Color_Tint: {r: 1, g: 1, b: 1, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -26,9 +26,9 @@ MonoBehaviour:
     supportVolumetrics: 1
     supportVolumetricClouds: 1
     supportLightLayers: 1
-    supportWater: 0
+    supportWater: 1
     waterSimulationResolution: 128
-    waterCPUSimulation: 0
+    waterCPUSimulation: 1
     supportDistortion: 1
     supportTransparentBackface: 1
     supportTransparentDepthPrepass: 1
@@ -290,7 +290,7 @@ MonoBehaviour:
     m_ObsoleteDecalLayerName7: Decal Layer 7
     m_ObsoleteSupportRuntimeDebugDisplay: 0
   allowShaderVariantStripping: 1
-  enableSRPBatcher: 1
+  enableSRPBatcher: 0
   availableMaterialQualityLevels: -1
   m_DefaultMaterialQualityLevel: 4
   diffusionProfileSettings: {fileID: 0}
