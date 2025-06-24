@@ -1,6 +1,7 @@
 ﻿using ScreenUtils.Manager;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TrainController : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class TrainController : MonoBehaviour
 
     [Header("Stop Logic")]
     public Vector3 targetPosition;
-    public float stopThreshold = 300f;         // Start braking this far before target
-    public float stopSnapDistance = 1f;        // Snap when this close to stop
+    public float stopThreshold = 300f;
+    public float stopSnapDistance = 1f;
 
     [Header("Audio")]
     public float minPitch = 0.5f;
@@ -24,6 +25,9 @@ public class TrainController : MonoBehaviour
     public Text speedText;
     public float maxNeedleAngle = -20f;
     public float zeroNeedleAngle = 230f;
+
+    [Header("UI Prompt")]
+    public TextMeshProUGUI journeyEndPromptText;
 
     private float currentSpeed = 0f;
     private int moveDirection = 1;
@@ -40,11 +44,13 @@ public class TrainController : MonoBehaviour
     void Start()
     {
         canStartJourney = false;
-
         moveDirection = targetPosition.x < transform.position.x ? -1 : 1;
 
         if (speedLabelTemplate != null)
             speedLabelTemplate.gameObject.SetActive(false);
+
+        if (journeyEndPromptText != null)
+            journeyEndPromptText.text = "";
     }
 
     void Update()
@@ -103,7 +109,7 @@ public class TrainController : MonoBehaviour
     void AutoBrake(float distanceToTarget)
     {
         float t = Mathf.InverseLerp(stopThreshold, stopSnapDistance, distanceToTarget);
-        float minApproachSpeed = Mathf.Lerp(0.5f, 5f, t); // Gets closer to 0 as we approach
+        float minApproachSpeed = Mathf.Lerp(0.5f, 5f, t);
 
         if (distanceToTarget > stopSnapDistance)
         {
@@ -130,7 +136,7 @@ public class TrainController : MonoBehaviour
             currentSpeed -= brakeForce * Time.deltaTime;
             currentSpeed = Mathf.Max(0f, currentSpeed);
 
-            if (currentSpeed <= 0.1f)
+            if (currentSpeed <= 0.1f && !GameController.Instance.isManualMode)
             {
                 currentSpeed = 0f;
                 hasJourneyEnded = true;
@@ -157,5 +163,20 @@ public class TrainController : MonoBehaviour
     public float CurrentSpeedNormalized()
     {
         return currentSpeed / maxSpeed;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("JourneyEndTrigger") && !hasJourneyEnded)
+        {
+            currentSpeed = 0f;
+            hasJourneyEnded = true;
+            canStartJourney = false;
+
+            if (journeyEndPromptText != null)
+                journeyEndPromptText.text = "";
+
+            GameController.Instance.EndJoureny();
+        }
     }
 }
