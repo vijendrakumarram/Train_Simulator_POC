@@ -503,7 +503,7 @@ Material:
     - _Color2Fade: 0.5
     - _Color2Level: 0
     - _Color2OverlayType: 0
-    - _ColorVariation: 0.1
+    - _ColorVariation: 0
     - _ColorVariation1: 1
     - _ColorsIntensityValue: 1
     - _ColorsMaskMaxValue: 0
