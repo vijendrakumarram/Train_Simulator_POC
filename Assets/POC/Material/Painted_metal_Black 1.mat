@@ -54,6 +54,6 @@ Material:
     - _DoubleSidedEnable: 1
     - _Metallic: 0.248
     m_Colors:
-    - _BaseColor: {r: 0.19464225, g: 0.32365525, b: 0.509434, a: 1}
-    - _Color: {r: 0.19464222, g: 0.32365522, b: 0.509434, a: 1}
+    - _BaseColor: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+    - _Color: {r: 0.16037735, g: 0.16037735, b: 0.16037735, a: 1}
   m_BuildTextureStacks: []
