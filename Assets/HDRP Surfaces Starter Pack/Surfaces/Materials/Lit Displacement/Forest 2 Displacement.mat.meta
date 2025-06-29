@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-guid: 0ffd608c940538d44a9734c43cbfa2af
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Surfaces/Materials/Lit Displacement/Forest
-    2 Displacement.mat
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:79a491837c7f5060702246259598e665702ad1a96467ff2b8072e2c4bb4df25f
+size 440

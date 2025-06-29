@@ -1,14 +1,3 @@
-fileFormatVersion: 2
-guid: b61068bfd57a38144b5d633ffeb85b9f
-PrefabImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Demo Scenes/Art/Nature/Prefab/Plant_C_02.prefab
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:a74253e8843facf9ba40849e7a500cb1ceb64fa276b6dea73b4629fbf31ab59f
+size 388

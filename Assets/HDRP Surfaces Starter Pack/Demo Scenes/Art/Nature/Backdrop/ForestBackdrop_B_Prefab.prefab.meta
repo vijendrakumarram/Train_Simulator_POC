@@ -1,15 +1,3 @@
-fileFormatVersion: 2
-guid: 6f1c4a61df85dcd47821dc9497adb1e6
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 100100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Demo Scenes/Art/Nature/Backdrop/ForestBackdrop_B_Prefab.prefab
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb5e24ad489795151c31b70ec1be916754d830177dde45a4d801ed76aa3a38ee
+size 439

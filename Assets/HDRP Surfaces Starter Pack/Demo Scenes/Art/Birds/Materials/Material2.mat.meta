@@ -1,15 +1,3 @@
-fileFormatVersion: 2
-guid: d86e076005200da4994fe5ee5d2acff6
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Demo Scenes/Art/Birds/Materials/Material2.mat
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:79d36ea8d2aaf34931f98e45937cb260e66d4fabc18662e9e4ea6433fbc6f8ff
+size 420

@@ -1,13 +1,3 @@
-fileFormatVersion: 2
-guid: 3faee234c7008df4893f045cb210b71c
-labels:
-- environment
-- nature
-- particles
-- rockyhills
-timeCreated: 1548589203
-licenseType: Store
-NativeFormatImporter:
-  userData: 
-  assetBundleName: particles
-  assetBundleVariant: particles
+version https://git-lfs.github.com/spec/v1
+oid sha256:1698818063d3873be8cf5d1941c42d262fa7c95bd13e3f2c3c74567e949fe95c
+size 255

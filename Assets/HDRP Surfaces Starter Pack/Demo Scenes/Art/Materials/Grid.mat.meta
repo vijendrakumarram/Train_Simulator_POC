@@ -1,15 +1,3 @@
-fileFormatVersion: 2
-guid: d2dd2392d8101c54fbeba31aa85f4a43
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Demo Scenes/Art/Materials/Grid.mat
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:8cfb61a43f2477fb1f1adc487999c11e0db42805dddad773a2f596ff2fb9d8c8
+size 409

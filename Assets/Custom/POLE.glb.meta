@@ -1,28 +1,3 @@
-fileFormatVersion: 2
-guid: 847eb77685c1115459d5d5e383707698
-ScriptedImporter:
-  internalIDToNameTable: []
-  externalObjects: {}
-  serializedVersion: 2
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
-  editorImportSettings:
-    generateSecondaryUVSet: 1
-  importSettings:
-    nodeNameMethod: 1
-    animationMethod: 2
-    generateMipMaps: 1
-    texturesReadable: 0
-    defaultMinFilterMode: 9729
-    defaultMagFilterMode: 9729
-    anisotropicFilterLevel: 1
-  instantiationSettings:
-    mask: -1
-    layer: 0
-    skinUpdateWhenOffscreen: 1
-    lightIntensityFactor: 1
-    sceneObjectCreation: 2
-  assetDependencies: []
-  reportItems: []
+version https://git-lfs.github.com/spec/v1
+oid sha256:14da71f8cab578005053b93baa7f3ef93552e66b139efc92f473333364ccdd78
+size 720

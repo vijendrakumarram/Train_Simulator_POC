@@ -1,15 +1,3 @@
-fileFormatVersion: 2
-guid: acae97e9b7b42f34488e9564331fa104
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 8574412962073106934
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Surfaces/Materials/Terrain Layers/Dirt.terrainlayer
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf3cac66128e2e5e4e1dbcb71f81f9ef23d52eb1065ab4c4b51608af3fcb3f00
+size 438

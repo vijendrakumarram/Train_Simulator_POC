@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-guid: 2f6048cb20df02240884a4f7c924d30e
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Surfaces/Materials/Lit Displacement/Dirt
-    Grass Displacement.mat
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:310be714f8959965579c893eb234a7f462ec62fc529de5a8252536addb35f186
+size 442

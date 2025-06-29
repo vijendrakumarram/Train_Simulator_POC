@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-guid: 41b4ab126d0398d4a82ef0abf15e1226
-timeCreated: 1492779479
-licenseType: Store
-NativeFormatImporter:
-  mainObjectFileID: 2100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Demo Scenes/Art/Nature/Materials/Fern_01_Mat.mat
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b8687f08376d003f66a13c8af4a8ef64bc9abc68ac0cb75b4c9e3456212173f
+size 444

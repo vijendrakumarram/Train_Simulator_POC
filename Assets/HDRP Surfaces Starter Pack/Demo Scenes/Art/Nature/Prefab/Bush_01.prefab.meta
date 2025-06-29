@@ -1,14 +1,3 @@
-fileFormatVersion: 2
-guid: 55fb4d7d07bc4ed48b7461359c111300
-PrefabImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Demo Scenes/Art/Nature/Prefab/Bush_01.prefab
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:9402da57e7944892969346a1107fdd81b0fe3034ebb60cafd7e4330c7922c6f0
+size 385

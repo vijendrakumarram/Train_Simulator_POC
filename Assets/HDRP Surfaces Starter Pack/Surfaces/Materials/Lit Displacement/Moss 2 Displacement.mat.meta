@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-guid: e0f9cced6f33f98418d128df7552c143
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Surfaces/Materials/Lit Displacement/Moss
-    2 Displacement.mat
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:970680fe0bcbfa368e08ced0f63b00a52d10f5310c783376127fea2375d201d5
+size 438

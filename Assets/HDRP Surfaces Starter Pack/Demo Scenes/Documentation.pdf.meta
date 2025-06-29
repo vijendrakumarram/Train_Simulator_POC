@@ -1,14 +1,3 @@
-fileFormatVersion: 2
-guid: c3fbeb5de61b88d4da9d007d8a0f00ce
-DefaultImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Demo Scenes/Documentation.pdf
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fec20215a2c3c2938a16f60f6259c89ab8afef34ededca3ae2bfdf496b70694
+size 371

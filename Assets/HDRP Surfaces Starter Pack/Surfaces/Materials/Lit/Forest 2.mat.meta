@@ -1,15 +1,3 @@
-fileFormatVersion: 2
-guid: 2603af1f84822b940a9f361e0d6302f1
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Surfaces/Materials/Lit/Forest 2.mat
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:977d83a098855f9df589e0ed8a2263dc73094166c4f4b21d000a9ae92b8b1bf4
+size 410

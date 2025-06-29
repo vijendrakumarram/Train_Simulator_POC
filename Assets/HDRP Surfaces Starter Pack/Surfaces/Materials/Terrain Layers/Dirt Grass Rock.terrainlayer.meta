@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-guid: 05da9cb3e79664144a4d5d4f8553fcba
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 8574412962073106934
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Surfaces/Materials/Terrain Layers/Dirt
-    Grass Rock.terrainlayer
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:2cb0cef98e5894158c4ecc2d3e5e43dd986918f456a7c5fab79591e6fb8398b1
+size 453

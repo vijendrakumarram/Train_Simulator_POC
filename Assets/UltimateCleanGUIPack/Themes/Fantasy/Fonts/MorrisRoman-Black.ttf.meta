@@ -1,22 +1,3 @@
-fileFormatVersion: 2
-guid: 3fc3a190b7578424994e9d12db3a34d4
-TrueTypeFontImporter:
-  externalObjects: {}
-  serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
-  characterSpacing: 0
-  characterPadding: 1
-  includeFontData: 1
-  fontName: Morris Roman
-  fontNames:
-  - Morris Roman
-  fallbackFontReferences: []
-  customCharacters: 
-  fontRenderingMode: 0
-  ascentCalculationMode: 1
-  useLegacyBoundsCalculation: 0
-  shouldRoundAdvanceValue: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:15db7874087ac7371745a99991726b22979dcb660e768f4903f425616b44c459
+size 524

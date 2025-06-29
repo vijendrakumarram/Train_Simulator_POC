@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-guid: 437a56449b16a6d46846d4bc0deea6bb
-NativeFormatImporter:
-  externalObjects: {}
-  mainObjectFileID: 2100000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Demo Scenes/Art/Nature/Water/Shader
-    Graphs_Water_Shader.mat
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:beb7d63bc2ea33252e45d8570c9af9605ab9056363a4851f844b98e2472a4122
+size 438

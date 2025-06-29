@@ -1,16 +1,3 @@
-fileFormatVersion: 2
-guid: d6ab9b13f138fe4418e41f447c5e8cef
-timeCreated: 1498165214
-licenseType: Store
-NativeFormatImporter:
-  mainObjectFileID: 2800000
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 239445
-  packageName: HDRP Surfaces Starter Pack
-  packageVersion: 1.0
-  assetPath: Assets/HDRP Surfaces Starter Pack/Demo Scenes/Art/Nature/Textures/billboards_albedo.srgb.dds.asset
-  uploadId: 626364
+version https://git-lfs.github.com/spec/v1
+oid sha256:d18fd57560d4945333e2c9b86a972ecfa19536e3355782207a1aeaf1bd7a5c6b
+size 460
