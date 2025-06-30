@@ -61,8 +61,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - baseColorTexture:
-        m_Texture: {fileID: -5390149515647955136, guid: 585989629b06d5c45a3983a111f1f948,
-          type: 3}
+        m_Texture: {fileID: 2800000, guid: aeb89769cab1d894ea80e180ccbd1b15, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - emissiveTexture:
